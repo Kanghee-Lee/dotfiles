@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04
+FROM nvidia/cuda:12.3.2-cudnn9-devel-ubuntu22.04
 SHELL ["/bin/bash", "-c"]
 
 ENV TZ Asia/Seoul
@@ -40,7 +40,7 @@ ENV LC_ALL en_US.UTF-8
 RUN mkdir /var/run/sshd
 
 WORKDIR /root
-RUN git clone https://github.com/chrockey/dotfiles
+RUN git clone https://github.com/Kanghee-Lee/dotfiles
 RUN cd dotfiles
 RUN bash dotfiles/install-vim.sh
 RUN bash dotfiles/install-zsh.sh
